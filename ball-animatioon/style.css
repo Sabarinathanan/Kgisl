@@ -1,0 +1,74 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.sky{
+    background:linear-gradient(#476fa3,#8FB4E5,#fff);
+    width: 100vw;
+    height: 50vh;
+    position: relative;
+}
+.cloud{
+    background-image: url(./cloud.png);
+    background-repeat: repeat-x;
+    width:100vw;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    animation: cloud 5s infinite;
+}
+.grass{
+    background: linear-gradient(#fff,#a1f03f,#70A037); 
+    /* background-image: url(./); */
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 50vh;
+    position: absolute;
+    top: 50%;
+}
+.ball{
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: red;
+    position: absolute;
+    top:220px;
+    left: 0;
+    z-index: 1;
+    animation: ball 3s ease-out infinite;
+}
+.shadow{
+    box-shadow: 4px 4px 1px black;
+}
+
+@keyframes ball{
+    50%,80%,90%{
+        top: 250px;
+        animation-timing-function: ease-out;
+    }
+    25%{
+        top: 150px;
+        width: 25px;
+        animation-timing-function: ease-out;
+    }
+    65%{
+        top: 180px;
+        width: 23px;
+        animation-timing-function: ease-out;
+    }
+    100%{
+        top: 250px;
+        left: 50%;
+        animation-timing-function: ease-out;
+    }
+}
+@keyframes cloud{
+    from{
+        left: -3%;
+    }
+    to{
+        left: 0;
+    }
+}
+

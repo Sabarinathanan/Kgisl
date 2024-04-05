@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sudoku</title>
+    <style>
+      body{
+        height: 90vh;
+        display: grid;
+        justify-content: center;
+        align-content: center;
+      }
+     .container {
+        border: 2px solid gray;
+        width: fit-content;
+        display: grid;
+        justify-content: center;
+        align-content: center;
+
+      }
+      .bgclr-gr {
+        background-color: lightgreen;
+      }
+     
+      h1 {
+        text-align: center;
+        background-color: yellow;
+      }
+      .row {
+        display: flex;
+        width: fit-content;
+      }
+      .col {
+        border: 1px solid gray;
+      }
+      .box {
+        display: flex;
+      }
+      .cell {
+        padding: 5px;
+        border: 1px solid gray;
+        width: 20px;
+        text-align: center;
+        transition: all 0.1s linear;
+      }
+      
+      /* .r1>.col:nth-child(even) {
+        background-color: red !important;
+      }
+      .r2>.col:nth-child(odd) {
+        background-color: red !important;
+      }
+      .r3>.col:nth-child(even) {
+        background-color: red !important;
+      } */
+      .row{
+        background-color: yellow;
+      }
+      input{
+        width: 14px;
+        background-color: yellow;
+        border: none;
+        text-align: center;
+        outline: none;
+      }
+      
+      
+    </style>
+  </head>
+  <body>
+    <!-- <div class="text"> -->
+    <h1>Sudoku</h1>
+    <div class="container">
+      <div class="row r1">
+        <div class="col">
+          <div class="box">
+            <div class="cell"><input type="text" placeholder="x"></div>
+            <div class="cell bgclr-gr">2</div>
+            <div class="cell bgclr-gr">3</div>
+          </div>
+          <div class="box">
+            <div class="cell"><input type="text" placeholder="x"></div>
+            <div class="cell"><input type="text" placeholder="x"></div>
+            <div class="cell bgclr-gr">6</div>
+          </div>
+          <div class="box">
+            <div class="cell bgclr-gr">7</div>
+            <div class="cell bgclr-gr">8</div>
+            <div class="cell"><input type="text" placeholder="x"></div>
+          </div>
+        </div>
+        <div class="col bgclr">
+          <div class="box">
+            <div class="cell bgclr-gr">1</div>
+            <div class="cell bgclr-gr">2</div>
+            <div class="cell"><input type="text" placeholder="x"></div>
+          </div>
+          <div class="box">
+            <div class="cell"><input type="text" placeholder="x"></div>
+            <div class="cell"><input type="text" placeholder="x"></div>
+            <div class="cell bgclr-gr">6</div>
+          </div>
+          <div class="box">
+            <div class="cell"><input type="text" placeholder="x"></div>
+            <div class="cell bgclr-gr">8</div>
+            <div class="cell bgclr-gr">9</div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="box">
+            <div class="cell bgclr-gr">1</div>
+            <div class="cell"><input type="text" placeholder="x"></div>
+            <div class="cell bgclr-gr">3</div>
+          </div>
+          <div class="box">
+            <div class="cell bgclr-gr">4</div>
+            <div class="cell bgclr-gr">5</div>
+            <div class="cell bgclr-gr">6</div>
+          </div>
+          <div class="box">
+            <div class="cell"><input type="text" placeholder="x" ></div>
+            <div class="cell bgclr-gr">8</div>
+            <div class="cell bgclr-gr">9</div>
+          </div>
+        </div>
+      </div>
+      <div class="row r2">
+        <div class="col bgclr">
+          <div class="box">
+            <div class="cell"><input type="text" placeholder="x"></div>
+            <div class="cell"><input type="text" placeholder="x"></div>
+            <div class="cell bgclr-gr">3</div>
+          </div>
+          <div class="box">
+            <div class="cell"><input type="text" placeholder="x"></div>
+            <div class="cell bgclr-gr">5</div>
+            <div class="cell bgclr-gr">6</div>
+          </div>
+          <div class="box">
+            <div class="cell"><input type="text" placeholder="x"></div>
+            <div class="cell bgclr-gr">8</div>
+            <div class="cell"><input type="text" placeholder="x"></div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="box">
+            <div class="cell"><input type="text" placeholder="x"></div>
+            <div class="cell bgclr-gr">2</div>
+            <div class="cell bgclr-gr">3</div>
+          </div>
+          <div class="box">
+            <div class="cell bgclr-gr">4</div>
+            <div class="cell bgclr-gr">5</div>
+            <div class="cell"><input type="text" placeholder="x"></div>
+          </div>
+          <div class="box">
+            <div class="cell"><input type="text" placeholder="x"></div>
+            <div class="cell bgclr-gr">8</div>
+            <div class="cell bgclr-gr">9</div>
+          </div>
+        </div>
+        <div class="col bgclr">
+          <div class="box">
+            <div class="cell bgclr-gr">1</div>
+            <div class="cell"><input type="text" placeholder="x"></div>
+            <div class="cell bgclr-gr">3</div>
+          </div>
+          <div class="box">
+            <div class="cell bgclr-gr">4</div>
+            <div class="cell"><input type="text" placeholder="x"></div>
+            <div class="cell bgclr-gr">6</div>
+          </div>
+          <div class="box">
+            <div class="cell"><input type="text" placeholder="x"></div>
+            <div class="cell bgclr-gr">8</div>
+            <div class="cell"><input type="text" placeholder="x"></div>
+          </div>
+        </div>
+      </div>
+      <div class="row r3">
+        <div class="col">
+          <div class="box">
+            <div class="cell bgclr-gr">1</div>
+            <div class="cell"><input type="text" placeholder="x"></div>
+            <div class="cell bgclr-gr">3</div>
+          </div>
+          <div class="box">
+            <div class="cell"><input type="text" placeholder="x"></div>
+            <div class="cell bgclr-gr">5</div>
+            <div class="cell bgclr-gr">6</div>
+          </div>
+          <div class="box">
+            <div class="cell bgclr-gr">7</div>
+            <div class="cell"><input type="text" placeholder="x"></div>
+            <div class="cell"><input type="text" placeholder="x"></div>
+          </div>
+        </div>
+        <div class="col bgclr">
+          <div class="box">
+            <div class="cell bgclr-gr">1</div>
+            <div class="cell"><input type="text" placeholder="x"></div>
+            <div class="cell bgclr-gr">3</div>
+          </div>
+          <div class="box">
+            <div class="cell"><input type="text" placeholder="x"></div>
+            <div class="cell"><input type="text" placeholder="x"></div>
+            <div class="cell bgclr-gr">6</div>
+          </div>
+          <div class="box">
+            <div class="cell bgclr-gr">7</div>
+            <div class="cell"><input type="text" placeholder="x"></div>
+            <div class="cell bgclr-gr">9</div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="box">
+            <div class="cell"><input type="text" placeholder="x"></div>
+            <div class="cell bgclr-gr">2</div>
+            <div class="cell bgclr-gr">3</div>
+          </div>
+          <div class="box">
+            <div class="cell"><input type="text" placeholder="x"></div>
+            <div class="cell bgclr-gr">5</div>
+            <div class="cell"><input type="text" placeholder="x"></div>
+          </div>
+          <div class="box">
+            <div class="cell bgclr-gr">7</div>
+            <div class="cell"><input type="text" placeholder="x"></div>
+            <div class="cell"><input type="text" placeholder="x"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+<!-- </div> -->
+  </body>
+</html>
